@@ -38,7 +38,7 @@ function InputComponent() {
         }
     }
     return (
-        <div className="rounded-lg bg-gray-200 p-5 mt-6">
+        <div className="rounded-lg bg-gray-200 p-5 mt-6 max-sm:p-2">
             <div className="flex justify-center w-full p-2">
                 <div className="flex w-10 items-center justify-center rounded-tl-lg rounded-bl-lg border-r border-gray-200 bg-white p-5">
                     <svg viewBox="0 0 20 20" aria-hidden="true" className="pointer-events-none absolute w-5 fill-gray-500 transition">

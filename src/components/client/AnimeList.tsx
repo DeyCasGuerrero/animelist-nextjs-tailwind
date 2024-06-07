@@ -15,17 +15,22 @@ export default function AnimeList({ post }: { post: Anime }) {
                 <p className="text-xl mt-2">{post.type}</p>
                 <p className="mt-1">Episodes: {post.episodes}</p>
                 {post.genres.length > 0 && (
-                    <p className="text-xl mt-1" key={post.genres[0].mail_id}>
+                    <p className="text-xl mt-1" key={post.genres[0].mal_id}>
                         Genre: {post.genres[0].name}
                     </p>
                 )}
             </div>
 
-            <Link href={`/busqueda/perfil/${post.mal_id}`} legacyBehavior>
-                <a className="mt-4 inline-block bg-green-500 p-3 rounded-xl text-center">
-                    Entrar
-                </a>
-            </Link>
+            {post.mal_id ? (
+                
+                <Link href={`/busqueda/perfil/${post.mal_id}`} legacyBehavior>
+                    <a className="mt-4 inline-block bg-green-500 p-3 rounded-xl text-center">
+                        Entrar
+                    </a>
+                </Link>
+            ) : (
+                <p>El ID del post es nulo.</p>
+            )}
         </div>
     )
 }

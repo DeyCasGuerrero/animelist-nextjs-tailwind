@@ -14,8 +14,8 @@ function NavBar(){
                 />
             </div>
             <div className="text-white text-xl flex items-center justify-around w-full">
-                <Link href="/" >inicio</Link>
-                <Link href="/busqueda"> busca YA!</Link>
+                <Link href="/" legacyBehavior><a className="hover:bg-pink-700 p-3 rounded-lg">inicio</a></Link>
+                <Link href="/busqueda" legacyBehavior><a className="hover:bg-pink-700 p-3 rounded-lg"> busca YA! </a></Link>
             </div>
         </nav>
     )

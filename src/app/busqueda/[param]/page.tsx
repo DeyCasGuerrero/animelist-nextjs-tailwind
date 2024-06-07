@@ -8,8 +8,6 @@ function quitarAcentos(cadena: string): string {
     return cadena.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
-
-
 async function PageAnimes({ params }) {
 
     const animeName = quitarAcentos(decodeURIComponent(params.param));

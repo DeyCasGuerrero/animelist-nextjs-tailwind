@@ -1,24 +1,23 @@
-// Interface for Image URLs
+// Interface para las imagenes waa
 export interface ImageURLs {
     image_url: string;
     small_image_url: string;
     large_image_url: string;
 }
 
-// Interface for Trailer
+// Interface para la url wa 
 export interface Trailer {
     youtube_id: string;
     url: string;
     embed_url: string;
 }
 
-// Interface for Title
 export interface Title {
     type: string;
     title: string;
 }
 
-// Interface for Aired
+// Interface para la decha de incio y fin del anime xd
 export interface Aired {
     from: string;
     to: string;
@@ -37,15 +36,9 @@ export interface Aired {
     };
 }
 
-// Interface for Producer, Licensor, Studio, Genre, etc.
-export interface Entity {
-    mal_id: number;
-    type: string;
-    name: string;
-    url: string;
-}
+// 
 
-// Main Anime Interface
+// la interface principal waaa
 export interface Anime {
     mal_id: number;
     url: string;
@@ -84,11 +77,9 @@ export interface Anime {
         timezone: string;
         string: string;
     };
-    producers: Entity[];
-    licensors: Entity[];
     studios: [
         {
-            mail_id:string;
+            mal_id:string;
             type: string;
             name: string;
             url: string;
@@ -96,13 +87,10 @@ export interface Anime {
     ];
     genres: [
         {
-            mail_id:string;
+            mal_id:string;
             type:string;
             name:string;
 
         }
     ];
-    explicit_genres: Entity[];
-    themes: Entity[];
-    demographics: Entity[];
 }
